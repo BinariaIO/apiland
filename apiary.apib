@@ -5,35 +5,35 @@ HOST: http://polls.apiblueprint.org/
 
 Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Questions Collection [/questions]
+## Daily Vitamins Collection [/dailyvitamins/1]
 
-### List All Questions [GET]
+### List vitamins for day of the week [GET]
 
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
+                "vitamins": [
                     {
-                        "choice": "Swift",
-                        "votes": 2048
+                        "name": "A",
+                        "code": 1
                     }, {
-                        "choice": "Python",
-                        "votes": 1024
+                        "name": "B1",
+                        "code": 2
                     }, {
-                        "choice": "Objective-C",
-                        "votes": 512
+                        "name": "C",
+                        "code": 3
                     }, {
-                        "choice": "Ruby",
-                        "votes": 256
+                        "name": "D",
+                        "code": 4
                     }
                 ]
             }
         ]
 
-### Create a New Question [POST]
+## Daily food intake [/dailyintake]
+
+### Record daily food intake [POST]
 
 You may create your own question using this action. It takes a JSON
 object containing a question and a collection of answers in the
@@ -42,39 +42,18 @@ form of choices.
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "date": "2074-02-13",
+            "dailyIntake": [["Apple", "Grape", "Nuts"],[1,0,4]]
         }
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Location: /dailyintake
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "status": 0
             }

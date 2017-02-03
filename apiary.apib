@@ -5,9 +5,9 @@ HOST: http://polls.apiblueprint.org/
 
 Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Daily Vitamins Collection [/dailyvitamins/1]
+## Sunday Vitamins Collection [/dailyvitamins/1]
 
-### List vitamins for day of the week [GET]
+### List vitamins for Sunday [GET]
 
 + Response 200 (application/json)
 
@@ -31,6 +31,309 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             }
         ]
 
+## Monday Vitamins Collection [/dailyvitamins/2]
+
+### List vitamins for Monday [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "vitamins": [
+                    {
+                        "name": "A",
+                        "code": 1
+                    }, {
+                        "name": "C",
+                        "code": 3
+                    }, {
+                        "name": "D",
+                        "code": 4
+                    }
+                ]
+            }
+        ]
+
+
+## Tuesday Vitamins Collection [/dailyvitamins/3]
+
+### List vitamins for Tuesday [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "vitamins": [
+                    {
+                        "name": "A",
+                        "code": 1
+                    }, {
+                        "name": "C",
+                        "code": 3
+                    }, {
+                        "name": "D",
+                        "code": 4
+                    }
+                ]
+            }
+        ]
+        
+## Wednesday Vitamins Collection [/dailyvitamins/4]
+
+### List vitamins for Wednesday [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "vitamins": [
+                    {
+                        "name": "A",
+                        "code": 1
+                    }, {
+                        "name": "C",
+                        "code": 3
+                    }, {
+                        "name": "D",
+                        "code": 4
+                    }
+                ]
+            }
+        ]
+        
+## Thusday Vitamins Collection [/dailyvitamins/5]
+        
+              
+### List vitamins for Thusday [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "vitamins": [
+                    {
+                        "name": "A",
+                        "code": 1
+                    }, {
+                        "name": "C",
+                        "code": 3
+                    }, {
+                        "name": "D",
+                        "code": 4
+                    }
+                ]
+            }
+        ]
+        
+## Friday Vitamins Collection [/dailyvitamins/6]
+        
+### List vitamins for Friday [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "vitamins": [
+                    {
+                        "name": "A",
+                        "code": 1
+                    }, {
+                        "name": "C",
+                        "code": 3
+                    }, {
+                        "name": "D",
+                        "code": 4
+                    }
+                ]
+            }
+        ]
+        
+## Saturday Vitamins Collection [/dailyvitamins/7]
+        
+### List vitamins for Saturday [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "vitamins": [
+                    {
+                        "name": "A",
+                        "code": 1
+                    }, {
+                        "name": "C",
+                        "code": 3
+                    }, {
+                        "name": "D",
+                        "code": 4
+                    }
+                ]
+            }
+        ]
+        
+## Food list [/food]
+
+### List of available food [GET]
+
++ Response 200 (application/json)
+
+        {
+         "food": [{
+          "name": "Fruit",
+          "children": [{
+           "name": "Grapefruit",
+           "code": 1,
+           "vitamins": [1,
+           2,
+           3]
+          },
+          {
+           "name": "Guava",
+           "code": 2,
+           "vitamins": [1,
+           2,
+           3,
+           5]
+          },
+          {
+           "name": "Mango",
+           "code": 3,
+           "vitamins": [1,
+           2,
+           3,
+           5]
+          },
+          {
+           "name": "Papaya",
+           "code": 4,
+           "vitamins": [1,
+           3,
+           5]
+          },
+          {
+           "name": "Passionfruit",
+           "code": 5,
+           "vitamins": [1,
+           3]
+          },
+          {
+           "name": "Tomatoes",
+           "code": 6,
+           "vitamins": [1]
+          },
+          {
+           "name": "Avocado",
+           "code": 7,
+           "vitamins": [2,
+           5]
+          },
+          {
+           "name": "Orange",
+           "code": 8,
+           "vitamins": [2,
+           3]
+          },
+          {
+           "name": "Dates",
+           "code": 9,
+           "vitamins": [2]
+          },
+          {
+           "name": "Strawberries",
+           "code": 10,
+           "vitamins": [3]
+          }]
+         },
+         {
+          "name": "Vegetables",
+          "children": [{
+           "name": "Broccoli",
+           "code": 11,
+           "vitamins": [1,
+           3]
+          },
+          {
+           "name": "Carrots",
+           "code": 12,
+           "vitamins": [1]
+          },
+          {
+           "name": "Peas",
+           "code": 13,
+           "vitamins": [1,
+           2]
+          },
+          {
+           "name": "Pumpkin",
+           "code": 14,
+           "vitamins": [1,
+           5]
+          },
+          {
+           "name": "Spinach",
+           "code": 15,
+           "vitamins": [1]
+          },
+          {
+           "name": "Corn",
+           "code": 17,
+           "vitamins": [2]
+          },
+          {
+           "name": "Potatoe",
+           "code": 18,
+           "vitamins": [2,
+           5]
+          },
+          {
+           "name": "Scarce",
+           "children": [{
+            "name": "Asparagu",
+            "code": 16,
+            "vitamins": [2]
+           },
+           {
+            "name": "Mushrooms",
+            "code": 19,
+            "vitamins": [4]
+           }]
+          }]
+         },
+         {
+          "name": "Nut/Grain",
+          "children": [{
+           "name": " Chestnuts  ",
+           "code": 20,
+           "vitamins": [1,
+           2,
+           3]
+          },
+          {
+           "name": "Pecans ",
+           "code": 21,
+           "vitamins": [1,
+           2]
+          },
+          {
+           "name": "Pistachios",
+           "code": 22,
+           "vitamins": [1,
+           2]
+          },
+          {
+           "name": "Peanuts",
+           "code": 23,
+           "vitamins": [2]
+          },
+          {
+           "name": "Almonds ",
+           "code": 24,
+           "vitamins": [5]
+          }]
+         }]
+        }
+
+  
 ## Daily food intake [/dailyintake]
 
 ### Record daily food intake [POST]
@@ -43,7 +346,7 @@ form of choices.
 
         {
             "date": "2074-02-13",
-            "dailyIntake": [["Apple", "Grape", "Nuts"],[1,0,4]]
+            "dailyIntake": [["Apple", "Grape", "Nuts"],[1,0,4],[1,2,0]]
         }
 
 + Response 201 (application/json)

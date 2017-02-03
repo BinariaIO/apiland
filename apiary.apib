@@ -11,25 +11,22 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
 + Response 200 (application/json)
 
-        [
-            {
-                "vitamins": [
-                    {
-                        "name": "A",
-                        "code": 1
-                    }, {
-                        "name": "B1",
-                        "code": 2
-                    }, {
-                        "name": "C",
-                        "code": 3
-                    }, {
-                        "name": "D",
-                        "code": 4
-                    }
-                ]
-            }
-        ]
+        {
+          "status": 0,
+          "message": "",
+          "data": [{
+            "name": "A",
+            "code": 1
+          },
+          {
+            "name": "B1",
+            "code": 2
+          },
+          {
+            "name": "C",
+            "code": 3
+          }]
+        }
 
 ## Monday Vitamins Collection [/dailyvitamins/2]
 
@@ -37,22 +34,22 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
 + Response 200 (application/json)
 
-        [
-            {
-                "vitamins": [
-                    {
-                        "name": "A",
-                        "code": 1
-                    }, {
-                        "name": "C",
-                        "code": 3
-                    }, {
-                        "name": "D",
-                        "code": 4
-                    }
-                ]
-            }
-        ]
+        {
+          "status": 0,
+          "message": "",
+          "data": [
+          {
+            "name": "B1",
+            "code": 2
+          },
+          {
+            "name": "D",
+            "code": 4
+          },{
+            "name": "E",
+            "code": 5
+          }]
+        }
 
 
 ## Tuesday Vitamins Collection [/dailyvitamins/3]
@@ -61,22 +58,17 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
 + Response 200 (application/json)
 
-        [
-            {
-                "vitamins": [
-                    {
-                        "name": "A",
-                        "code": 1
-                    }, {
-                        "name": "C",
-                        "code": 3
-                    }, {
-                        "name": "D",
-                        "code": 4
-                    }
-                ]
-            }
-        ]
+        {
+          "status": 0,
+          "message": "",
+          "data": [{
+            "name": "A",
+            "code": 1
+          },{
+            "name": "E",
+            "code": 5
+          }]
+        }
         
 ## Wednesday Vitamins Collection [/dailyvitamins/4]
 
@@ -84,22 +76,23 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
 + Response 200 (application/json)
 
-        [
-            {
-                "vitamins": [
-                    {
-                        "name": "A",
-                        "code": 1
-                    }, {
-                        "name": "C",
-                        "code": 3
-                    }, {
-                        "name": "D",
-                        "code": 4
-                    }
-                ]
-            }
-        ]
+        {
+          "status": 0,
+          "message": "",
+          "data": [
+          {
+          "name": "B1",
+          "code": 2
+          },
+          {
+          "name": "C",
+          "code": 3
+          },
+          {
+          "name": "D",
+          "code": 4
+          }]
+        }
         
 ## Thusday Vitamins Collection [/dailyvitamins/5]
         
@@ -108,22 +101,18 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
 + Response 200 (application/json)
 
-        [
-            {
-                "vitamins": [
-                    {
-                        "name": "A",
-                        "code": 1
-                    }, {
-                        "name": "C",
-                        "code": 3
-                    }, {
-                        "name": "D",
-                        "code": 4
-                    }
-                ]
-            }
-        ]
+        {
+          "status": 0,
+          "message": "",
+          "data": [
+          {
+            "name": "D",
+            "code": 4
+          },{
+            "name": "E",
+            "code": 5
+          }]
+        }
         
 ## Friday Vitamins Collection [/dailyvitamins/6]
         
@@ -131,22 +120,17 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
 + Response 200 (application/json)
 
-        [
-            {
-                "vitamins": [
-                    {
-                        "name": "A",
-                        "code": 1
-                    }, {
-                        "name": "C",
-                        "code": 3
-                    }, {
-                        "name": "D",
-                        "code": 4
-                    }
-                ]
-            }
-        ]
+        {
+          "status": 0,
+          "message": "",
+          "data": [{
+            "name": "A",
+            "code": 1
+          },{
+            "name": "E",
+            "code": 5
+          }]
+        }
         
 ## Saturday Vitamins Collection [/dailyvitamins/7]
         
@@ -154,22 +138,29 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
 + Response 200 (application/json)
 
-        [
-            {
-                "vitamins": [
-                    {
-                        "name": "A",
-                        "code": 1
-                    }, {
-                        "name": "C",
-                        "code": 3
-                    }, {
-                        "name": "D",
-                        "code": 4
-                    }
-                ]
-            }
-        ]
+        {
+          "status": 0,
+          "message": "",
+          "data": [{
+            "name": "A",
+            "code": 1daiz
+          },
+          {
+            "name": "B1",
+            "code": 2
+          },
+          {
+            "name": "C",
+            "code": 3
+          },
+          {
+            "name": "D",
+            "code": 4
+          },{
+            "name": "E",
+            "code": 5
+          }]
+        }
         
 ## Food list [/food]
 
@@ -178,7 +169,9 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 + Response 200 (application/json)
 
         {
-         "food": [{
+         "status": 0,
+         "message": "",
+         "data": [{
           "name": "Fruit",
           "children": [{
            "name": "Grapefruit",

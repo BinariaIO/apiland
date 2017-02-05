@@ -201,7 +201,7 @@ Stores information about daily food intake.
             {
                 "status": 0,
                 "message": "",
-                "data": {}
+                "data": null
             }
 ## Sunday Vitamins Collection [/dailyvitamins/1]
 
@@ -233,23 +233,12 @@ Returns a list of recommended vitamins for Sunday.
 
 ### List vitamins for Monday [GET] 
 
-+ Response 200 (application/json)
++ Response 400 (application/json)
 
         {
-          "status": 0,
-          "message": "",
-          "data": [
-          {
-            "name": "B1",
-            "code": 2
-          },
-          {
-            "name": "D",
-            "code": 4
-          },{
-            "name": "E",
-            "code": 5
-          }]
+          "status": 55,
+          "message": "Unable to read data for specified day",
+          "data": null
         }
 
 

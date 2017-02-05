@@ -1,170 +1,15 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: https://private-2686f-spacemission.apiary-mock.com/
 
 # SpaceMission
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+SpaceMission is an API for astronaut food tracking prototype application.
 
-## Sunday Vitamins Collection [/dailyvitamins/1]
-
-### List vitamins for Sunday [GET]
-
-+ Response 200 (application/json)
-
-        {
-          "status": 0,
-          "message": "",
-          "data": [{
-            "name": "A",
-            "code": 1
-          },
-          {
-            "name": "B1",
-            "code": 2
-          },
-          {
-            "name": "C",
-            "code": 3
-          }]
-        }
-
-## Monday Vitamins Collection [/dailyvitamins/2]
-
-### List vitamins for Monday [GET]
-
-+ Response 200 (application/json)
-
-        {
-          "status": 0,
-          "message": "",
-          "data": [
-          {
-            "name": "B1",
-            "code": 2
-          },
-          {
-            "name": "D",
-            "code": 4
-          },{
-            "name": "E",
-            "code": 5
-          }]
-        }
-
-
-## Tuesday Vitamins Collection [/dailyvitamins/3]
-
-### List vitamins for Tuesday [GET]
-
-+ Response 200 (application/json)
-
-        {
-          "status": 0,
-          "message": "",
-          "data": [{
-            "name": "A",
-            "code": 1
-          },{
-            "name": "E",
-            "code": 5
-          }]
-        }
-        
-## Wednesday Vitamins Collection [/dailyvitamins/4]
-
-### List vitamins for Wednesday [GET]
-
-+ Response 200 (application/json)
-
-        {
-          "status": 0,
-          "message": "",
-          "data": [
-          {
-          "name": "B1",
-          "code": 2
-          },
-          {
-          "name": "C",
-          "code": 3
-          },
-          {
-          "name": "D",
-          "code": 4
-          }]
-        }
-        
-## Thusday Vitamins Collection [/dailyvitamins/5]
-        
-              
-### List vitamins for Thusday [GET]
-
-+ Response 200 (application/json)
-
-        {
-          "status": 0,
-          "message": "",
-          "data": [
-          {
-            "name": "D",
-            "code": 4
-          },{
-            "name": "E",
-            "code": 5
-          }]
-        }
-        
-## Friday Vitamins Collection [/dailyvitamins/6]
-        
-### List vitamins for Friday [GET]
-
-+ Response 200 (application/json)
-
-        {
-          "status": 0,
-          "message": "",
-          "data": [{
-            "name": "A",
-            "code": 1
-          },{
-            "name": "E",
-            "code": 5
-          }]
-        }
-        
-## Saturday Vitamins Collection [/dailyvitamins/7]
-        
-### List vitamins for Saturday [GET]
-
-+ Response 200 (application/json)
-
-        {
-          "status": 0,
-          "message": "",
-          "data": [{
-            "name": "A",
-            "code": 1daiz
-          },
-          {
-            "name": "B1",
-            "code": 2
-          },
-          {
-            "name": "C",
-            "code": 3
-          },
-          {
-            "name": "D",
-            "code": 4
-          },{
-            "name": "E",
-            "code": 5
-          }]
-        }
-        
 ## Food list [/food]
 
 ### List of available food [GET]
+
+Returns a list of food available on a space mission.
 
 + Response 200 (application/json)
 
@@ -331,18 +176,21 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
 ### Record daily food intake [POST]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+Stores information about daily food intake. 
+
++ Attributes
+    + date: `2034-02-13` (string) - Current Earth date 
+    + dailyIntake: [[1, 4, 12],[1,0,4],[1,2,0]] (string) - 2D array. 1st row contains IDs of consumed food, other rows contain quantity information for each meal.
+
 
 + Request (application/json)
 
         {
             "date": "2074-02-13",
-            "dailyIntake": [["Apple", "Grape", "Nuts"],[1,0,4],[1,2,0]]
+            "dailyIntake": [[1, 4, 12],[1,0,4],[1,2,0]]
         }
 
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
     + Headers
 
@@ -351,5 +199,166 @@ form of choices.
     + Body
 
             {
-                "status": 0
+                "status": 0,
+                "message": "",
+                "data": {}
             }
+## Sunday Vitamins Collection [/dailyvitamins/1]
+
+### List vitamins for Sunday [GET]
+
+Returns a list of recommended vitamins for Sunday.
+
+
++ Response 200 (application/json)
+
+        {
+          "status": 0,
+          "message": "",
+          "data": [{
+            "name": "A",
+            "code": 1
+          },
+          {
+            "name": "B1",
+            "code": 2
+          },
+          {
+            "name": "C",
+            "code": 3
+          }]
+        }
+
+## Monday Vitamins Collection [/dailyvitamins/2]
+
+### List vitamins for Monday [GET] 
+
++ Response 200 (application/json)
+
+        {
+          "status": 0,
+          "message": "",
+          "data": [
+          {
+            "name": "B1",
+            "code": 2
+          },
+          {
+            "name": "D",
+            "code": 4
+          },{
+            "name": "E",
+            "code": 5
+          }]
+        }
+
+
+## Tuesday Vitamins Collection [/dailyvitamins/3]
+
+### List vitamins for Tuesday [GET]
+
++ Response 200 (application/json)
+
+        {
+          "status": 0,
+          "message": "",
+          "data": [{
+            "name": "A",
+            "code": 1
+          },{
+            "name": "E",
+            "code": 5
+          }]
+        }
+        
+## Wednesday Vitamins Collection [/dailyvitamins/4]
+
+### List vitamins for Wednesday [GET]
+
++ Response 200 (application/json)
+
+        {
+          "status": 0,
+          "message": "",
+          "data": [
+          {
+          "name": "B1",
+          "code": 2
+          },
+          {
+          "name": "C",
+          "code": 3
+          },
+          {
+          "name": "D",
+          "code": 4
+          }]
+        }
+        
+## Thusday Vitamins Collection [/dailyvitamins/5]
+        
+              
+### List vitamins for Thusday [GET]
+
++ Response 200 (application/json)
+
+        {
+          "status": 0,
+          "message": "",
+          "data": [
+          {
+            "name": "D",
+            "code": 4
+          },{
+            "name": "E",
+            "code": 5
+          }]
+        }
+        
+## Friday Vitamins Collection [/dailyvitamins/6]
+        
+### List vitamins for Friday [GET]
+
++ Response 200 (application/json)
+
+        {
+          "status": 0,
+          "message": "",
+          "data": [{
+            "name": "A",
+            "code": 1
+          },{
+            "name": "E",
+            "code": 5
+          }]
+        }
+        
+## Saturday Vitamins Collection [/dailyvitamins/7]
+        
+### List vitamins for Saturday [GET]
+
++ Response 200 (application/json)
+
+        {
+          "status": 0,
+          "message": "",
+          "data": [{
+            "name": "A",
+            "code": 1daiz
+          },
+          {
+            "name": "B1",
+            "code": 2
+          },
+          {
+            "name": "C",
+            "code": 3
+          },
+          {
+            "name": "D",
+            "code": 4
+          },{
+            "name": "E",
+            "code": 5
+          }]
+        }
